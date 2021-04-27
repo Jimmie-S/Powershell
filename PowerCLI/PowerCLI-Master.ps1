@@ -46,5 +46,9 @@ $NewVLANName = "NewVlanName"
 $NewVLANID = "VLANID"
 Get-VirtualSwitch -VMHost $VMhost -Name vSwitch0 | New-VirtualPortGroup -Name $NewVLANName -VLANID $NewVLANID
 
-############################## -
+############################## - List all Portgroups on a specific VMware host
+
+$VMhost = "fqdn-to-host"
+$vSwitchName = "vswitchname"
+Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name "$($vSwitchName)" | Get-VirtualPortGroup
 
