@@ -52,3 +52,4 @@ $VMhost = "fqdn-to-host"
 $vSwitchName = "vswitchname"
 Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name "$($vSwitchName)" | Get-VirtualPortGroup
 
+############################## - 
