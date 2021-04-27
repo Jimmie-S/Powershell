@@ -48,6 +48,3 @@ Get-VirtualSwitch -VMHost $VMhost -Name vSwitch0 | New-VirtualPortGroup -Name $N
 
 ############################## -
 
-get-help Get-VirtualPortGroup
-
-Test
