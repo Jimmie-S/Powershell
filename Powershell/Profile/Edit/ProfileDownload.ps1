@@ -1,5 +1,5 @@
 #URL to profile script
-$URI = "https://git.itgarden.se/projects/OR/repos/openrepo/raw/Powershell/Powershell%20Profiles/Microsoft.PowerShell_profile.ps1"
+$URI = "https://github.com/Jimmie-S/Powershell/blob/main/Powershell/Profile/Prepare-For-Powershell-Profile.ps1"
 
 #Create/Overwrite current profile
 New-Item -Path $PROFILE -ItemType file -Force
