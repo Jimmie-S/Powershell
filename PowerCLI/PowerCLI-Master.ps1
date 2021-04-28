@@ -8,7 +8,7 @@
 
 ################################ - Connect PowerCLI
 
-$vCenter = resvcenter1.resurs.loc
+$vCenter = fqdn.domain.local
 Connect-VIServer -server $vCenter
 # Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 
