@@ -8,7 +8,11 @@
 
 ################################ - Connect PowerCLI
 
-$vCenter = fqdn.vc.local
+<<<<<<< HEAD
+$vCenter = fqdn.domain.local
+=======
+$vCenter = fqdn.domain.local
+>>>>>>> 60fdd1adacf9f58b154de6622569c4892a710578
 Connect-VIServer -server $vCenter
 # Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
 
