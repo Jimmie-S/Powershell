@@ -6,5 +6,3 @@ New-Item -Path $PROFILE -ItemType file -Force
 
 #Download Powershell Profile
 Invoke-WebRequest $URI | Select-Object -ExpandProperty Content | Out-file -FilePath "$PROFILE" -Force
-
-Test
