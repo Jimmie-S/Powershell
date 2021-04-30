@@ -57,3 +57,5 @@ $vSwitchName = "vswitchname"
 Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name "$($vSwitchName)" | Get-VirtualPortGroup
 
 ############################## - 
+
+Get-VIPermission | Where {$_.Name –like “Admin”} | Select Role, Principal, Entity, UID | Export-CSV “C:\Temp\Rights.csv”
