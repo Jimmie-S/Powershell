@@ -8,18 +8,14 @@
 
 ################################ - Connect PowerCLI
 
-<<<<<<< HEAD
 $vCenter = fqdn.domain.local
-=======
-$vCenter = fqdn.domain.local
->>>>>>> 60fdd1adacf9f58b154de6622569c4892a710578
 Connect-VIServer -server $vCenter
 # Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $false
 
 ############################## -  Variables
 
 $DateStr = Get-Date -Format "MMdd"
-
 
 ############################## - Check Variables
 
@@ -54,7 +50,7 @@ Get-VirtualSwitch -VMHost $VMhost -Name vSwitch0 | New-VirtualPortGroup -Name $N
 
 $VMhost = "fqdn-to-host"
 $vSwitchName = "vswitchname"
-Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name "$($vSwitchName)" | Get-VirtualPortGroup
+Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name $vSwitchName | Get-VirtualPortGroup
 
 ############################## - 
 
