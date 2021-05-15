@@ -54,4 +54,4 @@ Get-VMHost -name $VMhost | Sort-Object Name | Get-VirtualSwitch -name $vSwitchNa
 
 ############################## - 
 
-Get-VIPermission | Where {$_.Name –like “Admin”} | Select Role, Principal, Entity, UID | Export-CSV “C:\Temp\Rights.csv”
+Get-VIPermission | Where-Object {$_.Name –like “Admin”} | Select-Object Role, Principal, Entity, UID | Export-CSV “C:\Temp\Rights.csv”
