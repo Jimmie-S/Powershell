@@ -29,3 +29,12 @@ if (!(Test-Path -Path $PROFILE)){ New-Item -Path $PROFILE -ItemType File } ; pow
 Import-Module -Name posh-git
 $StartSshAgent = "Start-Service ssh-agent"
 $StartSshAgent
+
+#URL to profile script
+$URI = "https://github.com/Jimmie-S/Powershell/blob/main/Powershell/Profile/Profile.ps1"
+
+#Create/Overwrite current profile
+New-Item -Path $PROFILE -ItemType file -Force
+
+#Download Powershell Profile
+Invoke-WebRequest $URI | Select-Object -ExpandProperty Content | Out-file -FilePath "$PROFILE" -Force
