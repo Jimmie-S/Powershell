@@ -18,3 +18,4 @@ Get-VMHost -name $VMhost | Get-VirtualSwitch -name vswitch2 | New-VirtualPortGro
 Get-VMHost -name $VMhost | Get-VirtualSwitch -name vswitch2 | New-VirtualPortGroup -name Name-1207 -VLanId 1207
 } 
 Disconnect-viserver -Server * -Confirm:$false ‍
+
