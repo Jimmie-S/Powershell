@@ -30,6 +30,16 @@ $NewVLANName = "NewVlanName"
 $NewVLANID = "VLANID"
 Get-VirtualSwitch -VMHost $VMhost -Name vSwitch0 | New-VirtualPortGroup -Name $NewVLANName -VLANID $NewVLANID
 
+############################## - Add Portgroup to vSwitch on all hosts in a cluster
+
+$Cluster = "ClusterName"
+$VMHosts = Get-cluster "$($Cluster)" | Get-VMHost  
+$NewVLANName = "NewVlanName"
+$NewVLANID = "VLANID"
+foreach ($VMHost in $VMHosts) {
+Get-VirtualSwitch -VMHost $VMhost -Name vSwitch0 | New-VirtualPortGroup -Name $NewVLANName -VLANID $NewVLANID -WhatIf
+}
+
 ############################## - List all Portgroups on a specific VMware host
 
 $VMhost = "fqdn-to-host"
