@@ -19,6 +19,4 @@ Get-VMHost -name $VMhost | Get-VirtualSwitch -name vswitch2 | New-VirtualPortGro
 } 
 Disconnect-viserver -Server * -Confirm:$false ‍
 
-Test!!!!
-
 
