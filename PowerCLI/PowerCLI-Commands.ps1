@@ -53,3 +53,4 @@ Get-VIPermission | Where-Object {$_.Name –like “Admin”} | Select-Object Ro
 ############################## - List all Datastores and VMFS Versions and Free Space in GB
 
 Get-Datastore | Sort-Object FileSystemVersion -Descending | Format-Table Name, FileSystemVersion, FreeSpaceGB
+
